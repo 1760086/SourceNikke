@@ -21,7 +21,7 @@ async function initJSON() {
             if (!RELEASED_UNITS.includes(val.name)) return false
             const liste_item = document.createElement("li");
 
-            liste_item.innerHTML = "<img src='images/sprite/si_" + val.id + "_00_s.png'/>" + " <span>" + val.name+ "</span>"
+            liste_item.innerHTML = "<img src='images/sprite/si_" + val.id + "_00_s.png'/>" + " <span>" + val.name + "</span>"
             liste_item.setAttribute('spineversion', val.version)
 
             liste_item.classList.add("charDiv")
@@ -33,6 +33,16 @@ async function initJSON() {
             div.appendChild(liste_item) //div character list
       })
 
+      const searchInput = document.getElementById("visualiserSearch")
+      if (searchInput) {
+            searchInput.addEventListener("input", () => {
+                  const q = searchInput.value.trim().toLowerCase()
+                  qsa("#visualiserMain .charDiv").forEach((li) => {
+                        const text = li.textContent.toLowerCase()
+                        li.hidden = q !== "" && !text.includes(q)
+                  })
+            })
+      }
 }
 
 initJSON()
