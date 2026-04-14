@@ -115,8 +115,8 @@ const changeSpine = (id) => {
             if(id==="c351" || id==="c070_02" || id==="c810_02") skin="bg"
 
             currentspine = new spineVersionLoader.SpinePlayer("player-container", {
-                  skelUrl: "/l2d/" + id + "/" + id + "_00.skel",
-                  atlasUrl: "/l2d/" + id + "/" + id + "_00.atlas",
+                  skelUrl: "l2d/" + id + "/" + id + "_00.skel",
+                  atlasUrl: "l2d/" + id + "/" + id + "_00.atlas",
                   animation: "idle",
                   skin: skin,
                   backgroundColor: transparent ? "#00000000" : current_color,
@@ -131,8 +131,8 @@ const changeSpine = (id) => {
             if(id==="c220" && skin!=="weapon_2") skin="weapon_1"
 
             currentspine = new spineVersionLoader.SpinePlayer("player-container", {
-                  skelUrl: "/l2d/" + id + "/cover/" + id + "_cover_00.skel",
-                  atlasUrl: "/l2d/" + id + "/cover/" + id + "_cover_00.atlas",
+                  skelUrl: "l2d/" + id + "/cover/" + id + "_cover_00.skel",
+                  atlasUrl: "l2d/" + id + "/cover/" + id + "_cover_00.atlas",
                   skin: skin,
                   backgroundColor: transparent ? "#00000000" : current_color,
                   alpha: transparent ? true : false,
@@ -143,8 +143,8 @@ const changeSpine = (id) => {
       }
       if (current_l2d === "aim") {
             currentspine = new spineVersionLoader.SpinePlayer("player-container", {
-                  skelUrl: "/l2d/" + id + "/aim/" + id + "_aim_00.skel",
-                  atlasUrl: "/l2d/" + id + "/aim/" + id + "_aim_00.atlas",
+                  skelUrl: "l2d/" + id + "/aim/" + id + "_aim_00.skel",
+                  atlasUrl: "l2d/" + id + "/aim/" + id + "_aim_00.atlas",
                   skin: skin,
                   animation: "aim_idle",
                   backgroundColor: transparent ? "#00000000" : current_color,
@@ -396,20 +396,20 @@ function getCurrentSpineAssetUrls () {
       const id = currentid
       if (current_l2d === "fb") {
             return {
-                  atlasUrl: "/l2d/" + id + "/" + id + "_00.atlas",
-                  skelUrl: "/l2d/" + id + "/" + id + "_00.skel"
+                  atlasUrl: "l2d/" + id + "/" + id + "_00.atlas",
+                  skelUrl: "l2d/" + id + "/" + id + "_00.skel"
             }
       }
       if (current_l2d === "cover") {
             return {
-                  atlasUrl: "/l2d/" + id + "/cover/" + id + "_cover_00.atlas",
-                  skelUrl: "/l2d/" + id + "/cover/" + id + "_cover_00.skel"
+                  atlasUrl: "l2d/" + id + "/cover/" + id + "_cover_00.atlas",
+                  skelUrl: "l2d/" + id + "/cover/" + id + "_cover_00.skel"
             }
       }
       if (current_l2d === "aim") {
             return {
-                  atlasUrl: "/l2d/" + id + "/aim/" + id + "_aim_00.atlas",
-                  skelUrl: "/l2d/" + id + "/aim/" + id + "_aim_00.skel"
+                  atlasUrl: "l2d/" + id + "/aim/" + id + "_aim_00.atlas",
+                  skelUrl: "l2d/" + id + "/aim/" + id + "_aim_00.skel"
             }
       }
       return null

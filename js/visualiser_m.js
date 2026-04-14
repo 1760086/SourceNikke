@@ -89,8 +89,8 @@ let changeSpine = (id) => {
             if(id==="c351" || id==="c070_02" || id==="c810_02") skin="bg"
 
         new spineVersionLoader.SpinePlayer("player-container", {
-            skelUrl: "/l2d/" + id + "/" + id + "_00.skel",
-            atlasUrl: "/l2d/" + id + "/" + id + "_00.atlas",
+            skelUrl: "l2d/" + id + "/" + id + "_00.skel",
+            atlasUrl: "l2d/" + id + "/" + id + "_00.atlas",
             animation: "idle",
             skin: skin,
             backgroundColor: "#2f353a",
@@ -103,8 +103,8 @@ let changeSpine = (id) => {
         if (id === "c220" && skin !== "weapon_2") skin = "weapon_1"
 
         new spineVersionLoader.SpinePlayer("player-container", {
-            skelUrl: "/l2d/" + id + "/cover/" + id + "_cover_00.skel",
-            atlasUrl: "/l2d/" + id + "/cover/" + id + "_cover_00.atlas",
+            skelUrl: "l2d/" + id + "/cover/" + id + "_cover_00.skel",
+            atlasUrl: "l2d/" + id + "/cover/" + id + "_cover_00.atlas",
             skin: skin,
             backgroundColor: "#2f353a",
             animation: "cover_idle",
@@ -114,8 +114,8 @@ let changeSpine = (id) => {
         })
     } else if (current_pose === "aim") {
         new spineVersionLoader.SpinePlayer("player-container", {
-            skelUrl: "/l2d/" + id + "/aim/" + id + "_aim_00.skel",
-            atlasUrl: "/l2d/" + id + "/aim/" + id + "_aim_00.atlas",
+            skelUrl: "l2d/" + id + "/aim/" + id + "_aim_00.skel",
+            atlasUrl: "l2d/" + id + "/aim/" + id + "_aim_00.atlas",
             skin: skin,
             animation: "aim_idle",
             backgroundColor: "#2f353a",
